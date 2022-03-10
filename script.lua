@@ -1,6 +1,6 @@
 local config = {
-    npc = 1.0, -- 0.0 Desligado
-    veiculos = 1.0, -- 0.0 Desligado
+    npc = 1.0, -- 0.0 (Desativa npc)
+    veiculos = 1.0, -- 0.0 (Desativa Veículos)
 }
 
 
