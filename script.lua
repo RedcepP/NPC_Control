@@ -16,8 +16,8 @@ Citizen.CreateThread(function()
         SetVehicleDensityMultiplierThisFrame(config.veiculos)
         SetRandomBoats(config.barcos)
         SetCreateRandomCops(config.policia)
-		SetCreateRandomCopsNotOnScenarios(config.policia)
-		SetCreateRandomCopsOnScenarios(config.policia)
+        SetCreateRandomCopsNotOnScenarios(config.policia)
+        SetCreateRandomCopsOnScenarios(config.policia)
 
     end 
 end)
