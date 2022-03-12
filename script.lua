@@ -3,7 +3,7 @@ local config = {
     veiculos = 1.0, -- 0.0 (Desativa Veículos)
     barcos = 1.0, -- 0.0 (Desativa Barcos)
     policia = 1.0, -- 0.0 (Desativa npc da Policia)
-    armasdrop = false,
+    armasdrop = false, -- true (Ativa o drop de armas quando um npc é morto)
 }
 
 
