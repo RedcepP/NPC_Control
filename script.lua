@@ -3,6 +3,7 @@ local config = {
     veiculos = 1.0, -- 0.0 (Desativa Veículos)
     barcos = 1.0, -- 0.0 (Desativa Barcos)
     policia = 1.0, -- 0.0 (Desativa npc da Policia)
+    armasdrop = false,
 }
 
 
@@ -20,6 +21,29 @@ Citizen.CreateThread(function()
         SetCreateRandomCopsOnScenarios(config.policia)
 
     end 
+end)
+
+-- remove os npc droparem armas.
+
+function SetWeaponDrops()
+    local handle, ped = FindFirstPed()
+    local finalizado = false
+
+    repeat
+        if not IsEntityDead(ped) then
+            SetPedDropsWeaponsWhenDead(ped, config.armasdrop)
+        end
+        finalizado, ped = FindNextPed(handle)
+    until not finalizado
+
+    EndFindPed(handle)
+end
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(1000)
+        SetWeaponDrops()
+    end
 end)
 
 -- Veículos de npc trancados.
