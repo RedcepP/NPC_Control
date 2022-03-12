@@ -27,7 +27,7 @@ end)
 Citizen.CreateThread(function()
     while true do
         Wait(1000)
-        local npc = GetPlayerPed(-1)
+        local ped = GetPlayerPed(-1)
         if DoesEntityExist(GetVehiclePedIsTryingToEnter(PlayerPedId(ped))) then
                 Wait(1000)
             local veiculos = GetVehiclePedIsTryingToEnter(PlayerPedId(ped))
