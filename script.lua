@@ -21,3 +21,20 @@ Citizen.CreateThread(function()
 
     end 
 end)
+
+-- Veículos de npc trancados.
+
+Citizen.CreateThread(function()
+    while true do
+        Wait(1000)
+        local npc = GetPlayerPed(-1)
+        if DoesEntityExist(GetVehiclePedIsTryingToEnter(PlayerPedId(ped))) then
+                Wait(1000)
+            local veiculos = GetVehiclePedIsTryingToEnter(PlayerPedId(ped))
+            local trancados = GetVehicleDoorLockStatus(veh)
+            if trancados == 2 then
+                ClearPedTasks(ped)
+            end
+        end
+    end
+end)
