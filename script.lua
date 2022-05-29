@@ -9,7 +9,7 @@ local config = {
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(0)
+        Citizen.Wait(0) -- Não alterar.
         SetPedDensityMultiplierThisFrame(config.npc)
         SetScenarioPedDensityMultiplierThisFrame(config.npc, config.npc)
         SetRandomVehicleDensityMultiplierThisFrame(config.veiculos)
