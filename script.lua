@@ -44,7 +44,7 @@ end
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(1000)
+        Citizen.Wait(1000) -- Não alterar.
         SetWeaponDrops()
     end
 end)
@@ -53,7 +53,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Wait(1000)
+        Wait(1000) -- Não alterar.
         local ped = GetPlayerPed(-1)
         if DoesEntityExist(GetVehiclePedIsTryingToEnter(PlayerPedId(ped))) then
                 Wait(1000)
